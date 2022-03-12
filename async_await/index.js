@@ -1,3 +1,15 @@
-https://api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
+require('dotenv').config()
 
-https://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@github.com/Gustavo-Zamboni/20221_maua_Ip2_introducao_js.git
+const PROTOCOL = process.env.PROTOCOL
+const BASE_URL = process.env.BASE_URL
+const APPID = process.env.APPID
+const LANGUAGE = process.env.LANGUAGE
+const UNITS = process.env.UNITS
+const Q = process.env.Q
+
+// operador de desestruturação
+// const {PROTOCOL,BASE_URL,APPID,LANGUAGE,UNITS} = process.env
+
+const url = `${PROTOCOL}://${BASE_URL}?appid=${APPID}&lang=${LANGUAGE}&units=${UNITS}&q=${Q}`
+
+console.log(url)
