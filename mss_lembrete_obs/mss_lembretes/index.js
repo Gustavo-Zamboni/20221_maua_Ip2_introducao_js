@@ -1,5 +1,7 @@
 const express = require('express')
+const {v4: uuidv4} = require('uuid')
 const app = express()
+
 //estamos aplicando um middleware que executa em todas as requisições
 app.use((req, res, next) => {
     console.log("oi")
