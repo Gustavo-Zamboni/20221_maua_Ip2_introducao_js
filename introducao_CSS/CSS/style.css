@@ -1,0 +1,47 @@
+/* h1 {
+    color: brown;
+} */
+
+
+#titulo { 
+    color: brown;
+}
+
+p{
+    color: black;
+}
+
+p#descricao{
+    text-align: center;
+}
+
+.promocao{
+    text-align: center;
+    background-color: beige;
+}
+
+p.promocao{
+    text-align: center;
+    background-color: azure;
+}
+
+strong {
+    color: blue;
+}
+
+p.promocao.nova{
+    color: black;
+}
+
+p#rodape.final-pagina{
+    background-color:#CCC;
+    text-align: center;
+}
+
+.novo-curso, .curso, #contato{
+    background-color:aliceblue;
+}
+
+.novo-curso{
+    color: red;
+}
