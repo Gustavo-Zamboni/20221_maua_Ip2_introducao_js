@@ -1,6 +1,16 @@
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Display</title>
+        
         <style>
+            .professores{
+                display:block;
+                width: 200px;
+                height: 200px;
+            }
             .engenharia{
                 /* Arial é uma fonte sem serifa */
                 /* font-family: Arial,sans-serif; */
@@ -8,15 +18,24 @@
                 /* font-size: 20px;
                 font-style: italic;
                 font-weight: bold; */
+                display: inline-block;
                 font: italic bold 24px Arial, sans-serif;
             }
             .farmacia{
+                display: inline-block;
                 font-family: Cambria, serif;
+                width: 200px;
+                height: 200px;
             }
         </style>
+
     </head>
     <body>
         <p class="engenharia">Engenahria de Computação</p>
         <p class="farmacia">Farmácia</p>
+        <a href="#" class="professores">Veja a lista de professores aqui</a>
+        <a href="#" class="contato">Entre em contato</a>
+        <footer class="rodape">Todos os direitos reservados</footer>
+        <button>Clique aqui para falar conosco</button>
     </body>
 </html>
