@@ -1,5 +1,8 @@
 const express = require('express')
+const {v4: uuidv4} = require('uuid')
 const app = express()
+const axios = require('axios')
+
 //estamos aplicando um middleware que executa em todas as requisições
 app.use((req, res, next) => {
     console.log("oi")
@@ -17,11 +20,18 @@ app.get('/lembretes', (req, res) => {
 }) 
 
 //POST
-app.post('/lembretes', (req,res) => {
+app.post('/lembretes', async (req,res) => {
     contador++
     //{texto: "Fazer café"}
     const {texto} = req.body
     lembretes[contador] ={contador: contador, texto: texto}
+    await axios.post('http://localhost:10000/eventos', {
+        tipo: "LembreteCriado",
+        dados: {
+            contador: contador, 
+            texto: texto
+        }
+    })
     res.status(201).send(lembretes[contador])
 })
  
