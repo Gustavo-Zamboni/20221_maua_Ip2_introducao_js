@@ -1,0 +1,21 @@
+<div class="container m-3 border p-3">
+  <form>
+    <div class="form-group mb-2">
+      <label for="nomeInput">Nome</label>
+      <input (input)="alterarNome($event)" id="nomeInput" type="text" class="form-control"
+      placeholder="Digite algo...">
+    </div>
+  </form>
+  <button (click)="adicionar()" type="button" class="btn btn-primary">
+    Adicionar
+  </button>
+  <div class="alert alert-primary mt-3 p-3">
+    {{nome}}
+  </div>
+
+</div>
+
+
+<!-- Meu nome é {{nome}} e tenho {{idade}} anos.
+
+Valor Sorteado: {{lancarDado()}} -->
